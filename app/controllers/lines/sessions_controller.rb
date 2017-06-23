@@ -7,8 +7,8 @@ module Lines
 
     layout "lines/admin"
 
-    
-    # Renders form for creating a new article 
+
+    # Renders form for creating a new article
     def new
     end
 
@@ -16,7 +16,7 @@ module Lines
     def create
       user = Lines::User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
-        session[:user_id] = user.id
+        session[:line_user_id] = user.id
         redirect_to admin_root_url
       else
         flash.now[:error] = t('lines.login_error')
@@ -26,7 +26,7 @@ module Lines
 
     # Destroys the current session (logout)
     def destroy
-      session[:user_id] = nil
+      session[:line_user_id] = nil
       redirect_to root_url
     end
   end
