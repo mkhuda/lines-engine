@@ -14,7 +14,7 @@ Lines::Engine.routes.draw do
   resources :articles, only: [:index, :show] do
     get 'page/:page', action: :index, on: :collection
   end
-  get 'post/:id', to: 'articles#show', as: 'post_show'
+  get '/:id', to: 'articles#show', as: 'post_show'
 
   resources :short_articles, only: [:index, :show], controller: :articles do
     get 'page/:page', action: :index, on: :collection
