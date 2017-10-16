@@ -33,6 +33,8 @@ Lines::Engine.routes.draw do
     root :to => 'articles#index'
   end
   
+  get 'administrator', to: 'admin/articles#index'
+  
   root :to => 'articles#index'
 
 end
