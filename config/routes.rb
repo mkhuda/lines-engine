@@ -12,7 +12,7 @@ Lines::Engine.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
   resources :articles, only: [:index, :show] do
-    get 'page/:page', action: :index, on: :collection
+    get ':page', action: :index, on: :collection
   end
 
   resources :short_articles, only: [:index, :show], controller: :articles do
