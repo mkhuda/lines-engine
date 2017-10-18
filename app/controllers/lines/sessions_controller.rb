@@ -17,7 +17,7 @@ module Lines
       user = Lines::User.find_by(email: params[:email])
       if user && user.authenticate(params[:password])
         session[:line_user_id] = user.id
-        redirect_to admin_root_url
+        redirect_to administrator_articles_url
       else
         flash.now[:error] = t('lines.login_error')
         render "new"
