@@ -15,7 +15,6 @@ gemspec
 
 #gem 'friendly_id', github: 'norman/friendly_id'
 #gem 'rails3-jquery-autocomplete', github: 'francisd/rails3-jquery-autocomplete'
-#gem 'meta-tags', require: 'meta_tags'
 
 
 group :development do
