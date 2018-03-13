@@ -13,9 +13,6 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-#gem 'friendly_id', github: 'norman/friendly_id'
-
-
 group :development do
   gem 'capistrano'
   gem 'yard'
