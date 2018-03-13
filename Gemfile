@@ -14,7 +14,6 @@ gemspec
 # gem 'debugger'
 
 #gem 'friendly_id', github: 'norman/friendly_id'
-#gem 'rails3-jquery-autocomplete', github: 'francisd/rails3-jquery-autocomplete'
 
 
 group :development do
